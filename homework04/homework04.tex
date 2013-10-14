@@ -1,0 +1,56 @@
+\documentclass{homework}
+\usepackage{cancel}
+\usepackage{amsthm}
+\usepackage{cleveref}
+\usepackage{upgreek}
+\usepackage[framed]{mcode}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usepackage{units}
+\usetikzlibrary{matrix}
+\newtheorem{lemma}{Lemma}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\title{Kevin Joyce}
+\course{Math 514 - Inverse Problems - Homework 4}
+\author{Kevin Joyce}
+\docdate{\today}
+\begin{document} 
+\newcommand{\figref}[1]{\figurename~\ref{#1}}
+\renewcommand{\bar}{\overline}
+\renewcommand{\hat}{\widehat}
+\renewcommand{\SS}{\mathcal S}
+\newcommand{\HH}{\mathscr H}
+\newcommand{\mom}{\widetilde}
+\newcommand{\mle}{\widehat \Uptheta}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\todist}{\stackrel{D}\longrightarrow}
+\newcommand{\toprob}{\stackrel{p}\longrightarrow}
+\newcommand{\TTheta}{\overline{\underline \Theta} }
+\newcommand{\del}{\partial}
+\newcommand{\approxsim}{\overset{\cdotp}{\underset{\cdotp}{\sim}}}
+
+\begin{longproblem} 
+Bardsley 2.9. In exercise 1.2, you were asked to modify \texttt{Deblur1d.m} so that the convolution kernel
+$$
+  a(s) = \begin{cases}
+  100s + 10,  &-\frac 1{10} \le s < 0,\\
+  -100s + 10, &0\le s \le \frac 1{10},\\
+  0,	      &\text{otherwise}
+  \end{cases}
+$$
+is used instead to define $\vect A$.
+
+\subproblem{ Use Tikhonov regularization together with GCV and L-curve to reconstruct $\vect x$ from observations $\vect b$.  What is the optimal regularization parameter $\alpha$ in each case?  Which gives the better reconstruction in your opinion?}
+
+\subproblem{Use TSVD regularization together with UPRE and DP to reconstruct $\vect x$ from observations $\vect b$.  What is the optimal regularization parameter $k$ in each case?  Which gives the better reconstruction in your opinion?}
+\end{longproblem}
+
+\problem{Bardsley 3.1. Modify \texttt{OnedDeblurBCs.m} so that it implements GCV and UPRE regularization parameter selection methods.  How do these parameter selection methods perform in terms of the visual quality of the regularized reconstructions?}
+\begin{solution}
+\end{solution}
+
+\problem{Bardsley 3.5. Use the Kronecker product properties (3.12)-(3.14) to prove (3.15) and (3.16)}
+
+\problem{Bardsley 3.6a. Derive the formulas for GCV analogous to (3.18).  Add lines of code to \texttt{Deblur2dSeparable.m} so that it implements GCV.}
+\end{document} 
