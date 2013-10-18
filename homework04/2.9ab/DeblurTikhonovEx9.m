@@ -37,10 +37,11 @@ alpha_lcv = fminbnd( Lcurve_fn , 1e-6, 1e-1)
 
 figure(2);
 plot(t,x_true,'k',...
-     t,(A'*A + alpha_gcv*eye(n))\A'*b,'b:',...
-     t,(A'*A + alpha_lcv*eye(n))\A'*b,'g');
+     t,(A'*A + alpha_gcv*eye(n))\A'*b,'b:x',...
+     t,(A'*A + alpha_lcv*eye(n))\A'*b,'g-d');
 title('Tikhonov filter')
-legend('true','GCV','L curve')
+legend('true',sprintf('GCV alpha = %.3e',alpha_gcv),sprintf('L curve alpha = %.3e',alpha_lcv))
+saveTightFigure(figure(2),'29a_reconstruction.pdf') 
 
 
 % Find the UPRE choice for k (see Section 2.2)
@@ -70,7 +71,8 @@ dp_xfilt = V*(dSfilt.*(U'*b));
 
 figure(3);
 plot(t,x_true,'k',...
-     t,upre_xfilt,'b',...
-     t,dp_xfilt,'g');
+     t,upre_xfilt,'b-x',...
+     t,dp_xfilt,'g:d');
 title('TSVD filter')
-legend('true','upre','dp')
+legend('true',sprintf('UPRE k = %d',upre_k),sprintf('DP k = %d',dp_k),'Location','NorthWest')
+saveTightFigure(figure(3),'29b_reconstruction.pdf') 
