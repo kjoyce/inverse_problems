@@ -1,0 +1,48 @@
+\documentclass{homework}
+\usepackage{lipsum}
+\usepackage{cancel}
+\usepackage{amsthm}
+\usepackage{cleveref}
+\usepackage{upgreek}
+\usepackage[framed]{mcode}
+\usepackage{mathrsfs}
+\usepackage{tikz}
+\usepackage{units}
+\usetikzlibrary{matrix}
+\newtheorem{lemma}{Lemma}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\title{Kevin Joyce}
+\course{Math 514 - Inverse Problems - Homework 5}
+\author{Kevin Joyce}
+\docdate{\today}
+\begin{document} 
+\newcommand{\figref}[1]{\figurename~\ref{#1}}
+\renewcommand{\bar}{\overline}
+\renewcommand{\hat}{\widehat}
+\renewcommand{\SS}{\mathcal S}
+\newcommand{\HH}{\mathscr H}
+\newcommand{\mom}{\widetilde}
+\newcommand{\mle}{\widehat \Uptheta}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\todist}{\stackrel{D}\longrightarrow}
+\newcommand{\toprob}{\stackrel{p}\longrightarrow}
+\newcommand{\TTheta}{\overline{\underline \Theta} }
+\newcommand{\del}{\partial}
+\newcommand{\approxsim}{\overset{\cdotp}{\underset{\cdotp}{\sim}}}
+
+Codes for each problem are available at \url{https://github.com/kjoyce/inverse_problems/tree/master/homework04/codes}
+
+\begin{longproblem}
+
+  \subproblem{Derive the formulas for the UPRE analogous to (3.18) for GCV.  Add lines of code to \texttt{Deblur2dPeriodic.m} so that it implements UPRE.}
+
+  \subproblem{Derive the formulas for the DP analogous to (3.18) for GCV.  Add lines of code to \texttt{Deblur2dPeriodic.m} so that it implements DP regularization parameter selection methods.}
+
+\end{longproblem}
+
+\begin{longproblem}
+Modify \texttt{Deblur2DataDriven.m} so that the truncated Landweber iteration, introduced in Chapter 2, is used for solving the deblurring problem.  Use the DP stopping rule, i.e. choose the first $k$ such that $\|\vect{Ax_k} - \vect b\|^2 \le n^2\sigma^2.$
+\end{longproblem}
+
+\end{document} 

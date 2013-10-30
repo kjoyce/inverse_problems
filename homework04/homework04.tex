@@ -31,7 +31,7 @@
 \newcommand{\del}{\partial}
 \newcommand{\approxsim}{\overset{\cdotp}{\underset{\cdotp}{\sim}}}
 
-Codes for each problem are available at \url{https://github.com/kjoyce/inverse_problems/homework04/codes/}
+Codes for each problem are available at \url{https://github.com/kjoyce/inverse_problems/tree/master/homework04/codes}
 
 \begin{longproblem} 
 Bardsley 2.9. In exercise 1.2, you were asked to modify \texttt{Deblur1d.m} so that the convolution kernel
@@ -121,7 +121,7 @@ For (3.16), we write $\vect A_1 = \vect U_1\vect \Sigma_1 \vect V_1^T$ and $\vec
   G(\alpha) = \left(\sum_{i,j=1}^n \frac{\alpha^2([\vect U_1^T \vect B\vect U_2]_{ij})^2}{([\vect \sigma_1\vect \sigma_2^T]_{ij}^2 + \alpha)} \right) \left/ \middle( m - \sum_{i,j=1}^n\frac{[\vect \sigma_1\vect \sigma_2^T]_{ij}^2}{[\vect \sigma_1\vect \sigma_2^T]_{ij}^2 + \alpha} \right).
   $$
   The following line of code implements the GCV curve:
-  \lstinputlisting[language=matlab, firstline=46, lastline=46]{Deblur2dSeparable.m}
+  \lstinputlisting[language=matlab, firstline=46, lastline=46]{codes/Deblur2dSeparable.m}
 
   \includegraphics[width=.75\textwidth]{images.pdf}
 
