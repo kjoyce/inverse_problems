@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.16)  28 OCT 2013 20:22
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.16)  31 OCT 2013 19:28
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -718,10 +718,35 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 34.
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 45.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 40.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 45.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 40.
 
+(/usr/share/texmf-texlive/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 45.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ot1pcr.fd
+File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
+) (./Deblur2dPeriodic.m
+LaTeX Font Info:    Try loading font information for TS1+pcr on input line 41.
+
+(/usr/share/texmf-texlive/tex/latex/psnfss/ts1pcr.fd
+File: ts1pcr.fd 2001/06/04 font definitions for TS1/pcr.
+)) (./Deblur2dPeriodic.m)
+<sat_gcv.pdf, id=4, 449.68pt x 337.26pt>
+File: sat_gcv.pdf Graphic file (type pdf)
+ <use sat_gcv.pdf>
+<sat_lcv.pdf, id=5, 449.68pt x 337.26pt>
+File: sat_lcv.pdf Graphic file (type pdf)
+ <use sat_lcv.pdf>
+<sat_upre.pdf, id=6, 449.68pt x 337.26pt>
+File: sat_upre.pdf Graphic file (type pdf)
+ <use sat_upre.pdf>
+<sat_dp.pdf, id=7, 449.68pt x 337.26pt>
+File: sat_dp.pdf Graphic file (type pdf)
+ <use sat_dp.pdf>
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 13.0pt.
@@ -730,26 +755,53 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
-] (./homework05.aux) ) 
+ <./sat_gcv.pdf> <./sat_lcv.pdf> <./sat_upre.pdf> <./sat_dp.pdf>] (./PeriodicBC
+test.m)
+<boundary_bad.pdf, id=53, 722.7pt x 578.16pt>
+File: boundary_bad.pdf Graphic file (type pdf)
+ <use boundary_bad.pdf>
+Overfull \hbox (3.02168pt too wide) in paragraph at lines 75--76
+ [] 
+ []
+
+[2 <./boundary_bad.pdf>]
+LaTeX Font Info:    Try loading font information for OML+pcr on input line 95.
+ (/usr/share/texmf-texlive/tex/latex/psnfss/omlpcr.fd
+File: omlpcr.fd 
+)
+LaTeX Font Info:    Font shape `OML/pcr/m/n' in size <8> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 95.
+
+(./DA_mult.m) (./AtDt_mult.m)
+<data_driven.pdf, id=64, 412.54124pt x 370.38374pt>
+File: data_driven.pdf Graphic file (type pdf)
+ <use data_driven.pdf>
+[3 <./data_driven.pdf>] (./homework05.aux) ) 
 Here is how much of TeX's memory you used:
- 14606 strings out of 495061
- 257545 string characters out of 1182621
- 396218 words of memory out of 3000000
- 17449 multiletter control sequences out of 15000+50000
- 13824 words of font info for 55 fonts, out of 3000000 for 9000
+ 15383 strings out of 495061
+ 266834 string characters out of 1182621
+ 428360 words of memory out of 3000000
+ 18183 multiletter control sequences out of 15000+50000
+ 16908 words of font info for 68 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 56i,11n,55p,791b,233s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texm
-f-texlive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fo
-nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfont
-s/cm/cmtt12.pfb>
-Output written on homework05.pdf (1 page, 76994 bytes).
+ 56i,12n,55p,791b,1772s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf-texlive/fonts/enc
+/dvips/base/8r.enc}</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/te
+xmf-texlive/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-texlive/
+fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-texlive/fonts/type
+1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/
+cm/cmr8.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr9.pfb><
+/usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
+texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texliv
+e/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/texmf-texlive/fonts/typ
+e1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-texlive/fonts/type1/urw/cour
+ier/ucrr8a.pfb>
+Output written on homework05.pdf (3 pages, 190371 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
+ 120 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

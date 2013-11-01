@@ -32,22 +32,21 @@ figure(3)
 % Find the discrepancy choice for alpha (see Section 2.2) and plot the
 % reconstruction
 %alpha_flag = 1;%input(' Enter 1 for GCV and 2 for L-curve regularization parameter selection. ');
-G_fn=@(a)(sum(sum((a^2*abs(bhat).^2)./(abs(ahat).^2+a).^2))) / ...
+G_fn=@(a)(sum(sum((a^2*abs(bhat/nx).^2)./(abs(ahat).^2+a).^2))) / ...
 	 (n-sum(sum(abs(ahat).^2./(abs(ahat).^2+a))))^2;
 gcv_alpha =  fminbnd(G_fn,0,1)
 C_fn = @(alpha) - curvatureLcurve(alpha,ahat,b);
 lc_alpha = fminbnd(C_fn,0,1);
 
-upre_fn = @(a) a^2*sum(sum((abs(bhat/n).^2)./(abs(ahat).^2+a).^2))+2*sigma^2*sum(sum(abs(ahat).^2./(abs(ahat).^2+a)));
+upre_fn = @(a) a^2*sum(sum((abs(bhat/nx).^2)./(abs(ahat).^2+a).^2))+...
+	       2*sigma^2*sum(sum(abs(ahat).^2./(abs(ahat).^2+a)));
 upre_alpha = fminbnd(upre_fn,0,1)
-dp_fn = @(a) (a^2*sum(sum((abs(bhat).^2)./(abs(ahat).^2+a).^2))-n*sigma^2)^2;
+dp_fn = @(a) (a^2*sum(sum((abs(bhat/nx).^2)./(abs(ahat).^2+a).^2))-n*sigma^2)^2;
 dp_alpha = fminbnd(dp_fn,0,1)
 
 xalpha = @(a) real(ifft2((conj(ahat)./(abs(ahat).^2+a).*bhat)));
 
-figure(4)
-  subplot(2,2,1), imagesc(xalpha(gcv_alpha)), colorbar, colormap(1-gray)
-  subplot(2,2,2), imagesc(xalpha(lc_alpha)), colorbar, colormap(1-gray)
-  subplot(2,2,3), imagesc(xalpha(upre_alpha)), colorbar, colormap(1-gray)
-  subplot(2,2,4), imagesc(xalpha(dp_alpha)), colorbar, colormap(1-gray)
-  
+  figure(), imagesc(xalpha(gcv_alpha)), colorbar, colormap(1-gray), title(sprintf('GCV \\alpha = %2.3e',gcv_alpha)), saveTightFigure(gcf,'sat_gcv.pdf')
+  figure(), imagesc(xalpha(lc_alpha)), colorbar, colormap(1-gray), title(sprintf('L-curve \\alpha = %2.3e',lc_alpha)), saveTightFigure(gcf,'sat_lcv.pdf')
+  figure(), imagesc(xalpha(upre_alpha)), colorbar, colormap(1-gray), title(sprintf('UPRE \\alpha = %2.3e',upre_alpha)), saveTightFigure(gcf,'sat_upre.pdf')
+  figure(), imagesc(xalpha(dp_alpha)), colorbar, colormap(1-gray), title(sprintf('DP \\alpha = %2.3e',dp_alpha)), saveTightFigure(gcf,'sat_dp.pdf')

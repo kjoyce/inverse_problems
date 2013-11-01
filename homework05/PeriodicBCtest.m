@@ -37,26 +37,31 @@ G_fn=@(a)(sum(sum((a^2*abs(bhat).^2)./(abs(ahat).^2+a).^2))) / ...
 gcv_alpha =  fminbnd(G_fn,0,1);
 
 xalpha = @(a) real(ifft2((conj(ahat)./(abs(ahat).^2+a).*bhat)));
+aa = logspace(-8,0);
 figure()
-  subplot(2,2,1), imagesc(x_true), colorbar, colormap(gray)
-  subplot(2,2,2), imagesc(b), colorbar, colormap(gray)
-  subplot(2,2,3), imagesc(xalpha(gcv_alpha)), colorbar, colormap(gray)
+  subplot(2,2,1), imagesc(x_true), colorbar, colormap(gray), title('True Image')
+  subplot(2,2,2), imagesc(b), colorbar, colormap(gray), title('Blurred Noisy Image')
+  subplot(2,2,3), imagesc(xalpha(gcv_alpha),[0,max(x_true(:))]), colorbar, colormap(gray), title(sprintf('GCV Construction: alpha = %2.3e',gcv_alpha))
+  subplot(2,2,4), loglog(aa,arrayfun(G_fn,aa),'b-', gcv_alpha,G_fn(gcv_alpha),'b*'), xlim([1e-8,1]), title('GCV Curve')
+set(gcf,'PaperPosition', [0 0 10 8])
+set(gcf,'PaperSize', [10 8]) 
+saveas(gcf,'boundary_bad.pdf') 
 
 % Stupid idea 
-[nrow, ~] = size(b);
-pad = zeros(nrow,20); 
-b_pad = [pad b pad]; 
-[~, ncol] = size(b_pad);
-pad = zeros(20,ncol);
-b_pad = [pad; b_pad; pad];
-[nx, ny] = size(b_pad);
-n = nx*ny;
-ahat = fft2(fftshift(kernel2));
-bhat = fft2(b_pad);
-G_fn=@(a)(sum(sum((a^2*abs(bhat).^2)./(abs(ahat).^2+a).^2))) / ...
-	 (n-sum(sum(abs(ahat).^2./(abs(ahat).^2+a))))^2;
-gcv_alpha =  fminbnd(G_fn,0,1);
-
-xalpha = @(a) real(ifft2((conj(ahat)./(abs(ahat).^2+a).*bhat)));
-  subplot(2,2,4), imagesc(xalpha(gcv_alpha)), colorbar, colormap(gray)
+%[nrow, ~] = size(b);
+%pad = zeros(nrow,20); 
+%b_pad = [pad b pad]; 
+%[~, ncol] = size(b_pad);
+%pad = zeros(20,ncol);
+%b_pad = [pad; b_pad; pad];
+%[nx, ny] = size(b_pad);
+%n = nx*ny;
+%ahat = fft2(fftshift(kernel2));
+%bhat = fft2(b_pad);
+%G_fn=@(a)(sum(sum((a^2*abs(bhat).^2)./(abs(ahat).^2+a).^2))) / ...
+%	 (n-sum(sum(abs(ahat).^2./(abs(ahat).^2+a))))^2;
+%gcv_alpha =  fminbnd(G_fn,0,1);
+%
+%xalpha = @(a) real(ifft2((conj(ahat)./(abs(ahat).^2+a).*bhat)));
+%  subplot(2,2,4), imagesc(xalpha(gcv_alpha)), colorbar, colormap(gray)
 

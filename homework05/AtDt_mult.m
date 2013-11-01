@@ -1,5 +1,4 @@
 function AtDtx = AtDt_mult(x,ahat)
-[nx, ny] = size(x);
-Dtx = padarray(x,[nx/2,ny/2]);
-ADtx = real(ifft(ahat.*fft2(Dtx))); 
-AtDtx = ADtx; % Recall A is symmetric
+[nnx, nny] = size(x);
+Dtx = padarray(x,[nnx/2,nny/2]);
+AtDtx = real(ifft2(conj(ahat).*fft2(Dtx))); 
