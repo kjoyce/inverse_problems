@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.16)  15 NOV 2013 10:37
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.6.16)  15 NOV 2013 10:38
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -824,7 +824,7 @@ texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texli
 ve/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-texlive/fonts/typ
 e1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-texlive/fonts/type1/urw/cour
 ier/ucrr8a.pfb>
-Output written on homework06.pdf (2 pages, 400199 bytes).
+Output written on homework06.pdf (2 pages, 400067 bytes).
 PDF statistics:
  166 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
