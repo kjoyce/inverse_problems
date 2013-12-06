@@ -1,0 +1,25 @@
+\documentclass{article}
+\gammabegin{document}
+{\bf Variable order smoothness priors for ill-posed inverse problems - Calvetti
+\& Somersalo -} The authors present a method for solving inverse problems that
+is informed by mixtures of variable weighted Gaussian autoregressive (AR)
+priors.  Both the parameter determining the mixture (via convex combinations of
+different AR models) and the parameter for weighting each observation (termed
+innovation in time series literature) are allowed to vary over the domain.  Their algorithm
+presents estimates of the maximum a posteriori (MAP) estimator and does \emph{not} quantify
+uncertainty in these estimates.  They implement the method on a deblurring example 
+that is problematic for a standard fixed level AR prior, but is ideal for the structure
+of their algorithm.
+
+A few hyper-prior distribution families are presented for both the mixture
+parameter, $\theta_i$, and the innovation variance, $\gamma_i$.  Two
+hyper-prior families are presented for $\theta_i$.  The first assumes that over
+most of the domain the solution will have one a particular AR model level
+smoothness.  The other, which is implemented in a computed example, assumes a
+smooth transition in the values of $\theta_j$.  The hyper-priors given for
+$\gamma_i$ are distributed with a generalized $\Gamma$ distribution.
+
+The posterior distribution depends on $(x,\theta_j,\gamma_j)$, and the algorithm for approximating the MAP estimate maximizes in succession 
+
+
+\end{document}

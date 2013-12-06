@@ -27,13 +27,3 @@
   
   % Use 128^2 PSF model with periodic BCs and GCV choice of alpha
   kernel = kernel(65:192,65:192); 
-
-n = nx*ny
-ahat = fft2(fftshift(kernel));
-Amult = @(x) real(ifft2(ahat.*fft2(x)));
-Ax = Amult(x_true);
-bhat = fft2(b);
-G_fn=@(a)(sum(sum((a^2*abs(bhat).^2)./(abs(ahat).^2+a).^2))) / ...
-	 (n-sum(sum(abs(ahat).^2./(abs(ahat).^2+a))))^2;
-gcv_alpha =  fminbnd(G_fn,0,1);
-

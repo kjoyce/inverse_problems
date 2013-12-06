@@ -31,8 +31,8 @@ figure(1),
 figure(2),
   plot(t,A\b,'k',t,x_true,'b')
 
-delta_b = norm(b-Ax)
-delta_x = norm(x_true-A\b)
+delta_b = norm(b-Ax)/norm(Ax)
+delta_x = norm(x_true-A\b)/norm(x_true)
 
 % SVD analysis
 [U,S,V] = svd(A);

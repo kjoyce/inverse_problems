@@ -1,4 +1,4 @@
-% Statistical Problem: Baseball Data
+% Statistical Problem: Baseball Pitcher Data
 
 % Batting average against
 AVG = [209 210 190 211 243 202 211 211 229 241 250 214 219 221 249 250 ...
